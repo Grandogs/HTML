@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>h1{
+        color: rgb(78, 105, 255)}
+        body{background: coral;
+        color: rgb(197, 228, 242);
+        font: normal 18pt arial;}
+        div#area{background: arial;
+        color: rgb(33, 243, 215);
+        width: 200px;
+        height: 100px;
+        font: arial;
+        }
+        </style>
+</head>
+<body>
+    <h1>oi</h1>
+    <p>ei gata</p>
+    <p>aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id=area>clique em mim</div>
+    <script>
+        var corpo = window.document.body
+var p1 = window.document.getElementsByTagName('p')[1]
+window.document.write('Está escrito assim: ' + p1.innerText)
+corpo.style.color = 'whiter'
+p1.style.color = 'red'
+
+
+var a = window.document.getElementById('area')
+
+a.addEventListener('click', clicar)
+a.addEventListener('onmouseover', entrar) 
+a.addEventListener('mouseout', sair)
+
+function clicar() {
+a.innerText= 'Parabéns!'
+a.style.background= 'yellow'
+
+function entrar() {
+    a.innerText= 'Entrou!'
+}
+function sair() {
+    a.innerText= 'Saiu!'
+    a.style.background='blue'
+}
+}
+    </script>
+</body>
+</html>
